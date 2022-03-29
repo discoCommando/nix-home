@@ -1,89 +1,198 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "alt+cmd+left",
-    "command": "workbench.action.navigateBack"
+    "key": "cmd+k cmd+d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "alt+cmd+right",
-    "command": "workbench.action.navigateForward"
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
-    "key": "cmd+0",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "key": "cmd+k cmd+e",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "cmd+1",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "key": "f8",
+    "command": "-editor.action.marker.nextInFiles",
+    "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "cmd+9",
-    "command": "workbench.actions.view.problems"
+    "key": "alt+f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "cmd+p",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+    "key": "cmd+k shift+cmd+e",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "cmd+l",
-    "command": "editor.action.refactor",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    "key": "shift+f8",
+    "command": "-editor.action.marker.prevInFiles",
+    "when": "editorFocus && !editorReadonly"
   },
   {
-    "key": "cmd+shift+l",
-    "command": "editor.action.codeAction",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly",
-    "args": {
-      "kind": "refactor.wingman.caseSplit"
-      // "apply": "never"
-    }
+    "key": "shift+cmd+k shift+cmd+y",
+    "command": "keybindings.editor.defineWhenExpression",
+    "when": "inKeybindings && keybindingFocus"
   },
   {
-    "key": "cmd+y",
-    "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
+    "key": "cmd+k cmd+e",
+    "command": "-keybindings.editor.defineWhenExpression",
+    "when": "inKeybindings && keybindingFocus"
   },
   {
-    "key": "cmd+c",
-    "command": "-editor.action.clipboardCopyAction",
-    "when": "textInputFocus"
+    "key": "cmd+k cmd+;",
+    "command": "editor.action.showSnippets"
   },
   {
-    "key": "cmd+v",
-    "command": "-editor.action.clipboardPasteAction",
-    "when": "textInputFocus && !editorReadonly"
+    "key": "ctrl+a left",
+    "command": "workbench.action.focusLeftGroup"
   },
   {
-    "key": "cmd+r",
-    "command": "editor.action.startFindReplaceAction"
+    "key": "cmd+k cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
   },
   {
-    "key": "shift+cmd+r",
-    "command": "workbench.action.replaceInFiles"
+    "key": "ctrl+a right",
+    "command": "workbench.action.focusRightGroup"
   },
   {
-    "key": "cmd+a",
-    "command": "editor.action.selectHighlights",
+    "key": "cmd+k cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+a tab",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  {
+    "key": "alt+cmd+[",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+cmd+]",
+    "command": "-editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k 0",
+    "command": "editor.action.removeCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+u",
+    "command": "-editor.action.removeCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-workbench.action.keybindingsReference"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+f",
+    "command": "workbench.action.toggleEditorWidths"
+  },
+  {
+    "key": "cmd+k e",
+    "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
   {
-    "key": "ctrl+a",
-    "command": "editor.action.selectAll",
-    "when": "textInputFocus"
+    "key": "alt+f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus"
   },
   {
-    "key": "cmd+f11",
-    "command": "editor.action.clipboardCopyAction",
-    "when": "textInputFocus"
+    "key": "ctrl+a down",
+    "command": "terminal.focus"
   },
   {
-    "key": "cmd+f12",
-    "command": "editor.action.clipboardPasteAction",
-    "when": "textInputFocus && !editorReadonly"
+    "key": "ctrl+a up",
+    "command": "workbench.action.focusAboveGroup"
   },
   {
-    "key": "ctrl+d",
-    "command": "compareSelected",
-    "when": "sideBarFocus && activeViewlet"
+    "key": "cmd+k cmd+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+k shift+5",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "cmd+k cmd+b",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "-bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+n",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k f",
+    "command": "editor.fold"
+  },
+  {
+    "key": "cmd+k cmd+right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+k cmd+left",
+    "command": "workbench.action.moveEditorToLeftGroup"
   }
+  // {
+  //   "key": "space",
+  //   "command": "whichkey.show",
+  //   "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+  // }
 ]
